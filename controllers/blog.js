@@ -78,11 +78,16 @@ const getBlog = async (req,res)=>{
 }
 
 const getBlogs = async (req,res)=>{
-    const blogs = await Blog.find({});
+    try {
+      const blogs = await Blog.find({});
     if(blogs){
         return res.status(200).send(blogs.reverse())
     }else {
         return res.status(500).send(err)
+    }
+    } catch (error) {
+      console.log(error);
+      res.status(500).send({error})
     }
 }
 export {addBlog, addCmnt, getBlog, getBlogs}
