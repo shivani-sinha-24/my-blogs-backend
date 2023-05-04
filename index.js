@@ -47,7 +47,7 @@ async function main() {
 }
 
 //routes
-app.get('/',(req,res)=>res.send('Hello World from my blogs backend' ))
+app.get('/',(req,res)=>res.send('Hello World from my blogs backend. ' ))
 app.use("/user",userRoutes);
 app.use("/blog",blogRoutes);
 
