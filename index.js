@@ -13,6 +13,7 @@ const app = express();
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use("/uploads", express.static("./uploads"));  //upload folder should in the root directory
 app.use(function (err, req, res, next) {
 
   console.log(err);
@@ -36,7 +37,6 @@ const corsOptions ={
   optionSuccessStatus:200
 }
 app.use(cors(corsOptions));
-app.use("/uploads", express.static("./uploads"));  //upload folder should in the root directory
 
 // connect mongodb
 main().catch((err) => console.log(err));
