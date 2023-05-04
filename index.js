@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'https://my-blogs-frontend-1f33tlyry-shivani-sinha-24.vercel.app',
+  origin: 'https://my-blogs-frontend.vercel.app',
   methods: 'GET,POST',
   credentials:true
   }
