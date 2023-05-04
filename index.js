@@ -14,8 +14,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors({
-  origin: 'https://my-blogs-frontend.vercel.app',
-  methods: 'GET,POST',
+  origin: '*',
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials:true
   }
 ));

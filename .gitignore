@@ -24,6 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # ignore all image files
-image-*
-*.jpg
-*.png
+# image-*
+# *.jpg
+# *.png
